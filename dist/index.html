@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>proyecto v1</title>
+  
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    
+<!-- partial:index.partial.html -->
+<div class="container - fluid">
+        <div class="row">
+            <div class="col-sm-12" id="seleccion">Itla Ranking 2022</div>
+            <input type="hidden" class="form-control" id="userOculto" value="">
+        </div>
+        <p>&nbsp;</p>
+        <div class="row">
+            <div class="col-sm-12">
+                <button class="btn btn-success btn-lg btn-block" id="boton-abrirModal">Nuevo Usuario</button>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+          </nav>
+        <div class="row">
+            <div class="col-sm-12" id="dTabla">
+                <input type="hidden" id="numContact" value="0">
+                <table class='table table-striped' id='tabContactos'>
+                <thead>
+                <tr>
+                <th class='titulo1' colspan='10' id='ncontactos'>USUARIOS</th>
+                </tr>
+                <tr>
+                    <th id="primero" class='titulo3'>Borrar</th>
+                    <th class='titulo3'>Editar</th>
+                    <th class='titulo3'>Matricula</th>
+                    <th class='titulo3'>Nombre</th>
+                    <th class='titulo3'>Sexo</th>
+                    <th class='titulo3'>F Nac</th>
+                    <th class='titulo3'>Telef</th>
+                    <th class='titulo3'>E-mail</th>
+                    <th class='titulo3'>Habilidad</th>
+                    <th id="ultimo" class='titulo3'>Posicion</th>
+                    <!-- <th class='titulo3'>Horario</th> -->
+                </tr>
+                </thead>
+                <tbody id="Tcont">
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+   
+<!--<form role = "form">-->
+    <strong><div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" data-keyboard="false" data-backdrop="static"></strong>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+                    <div>
+                        <div class="d-flex justify-content-center mb-4">
+                            <img src="https://definicion.de/wp-content/uploads/2019/07/perfil-de-usuario.png"
+                            class="rounded-circle" alt="example placeholder" style="width: 200px;" />
+                        </div>
+                        <div class="boton-cerrarModal">
+                            <div class="btn btn-primary btn-rounded">
+                                <label class="form-label text-white m-1" for="customFile2">subir foto</label>
+                                <input type="file" class="form-control d-none" id="customFile2" />
+                            </div>
+                  
+                    <h3>Introducir Participante</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                    <label for="nombretxt">Matricula</label>
+                    <input type="text" class="form-control" id="nombretxt" placeholder="Matricula">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="apellidotxt">Nombre</label>
+                    <input type="text" class="form-control" id="apellidotxt" placeholder="Nombre">
+                    </div>
+                    
+                    <div class="form-group">
+                    <label for="sexotxt">Sexo</label>
+                    <input type="text" class="form-control" id="sexotxt" placeholder="Sexo">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="fNacimientotxt">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="fNacimientotxt" placeholder="F. Nacimiento (dd/mm/aaaa)">
+                    </div>
+                    
+                    <div class="form-group">
+                    <label for="telefonotxt">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefonotxt" name="telefonotxt" placeholder="Teléfono">
+                    </div>
+                    
+                    <div class="form-group">
+                    <label for="emailtxt">Email</label>
+                    <input type="email" class="form-control" id="emailtxt" placeholder="email@algo.com">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="passwordtxt">Habilidad</label>
+                    <input type="password" class="form-control" id="passwordtxt" placeholder="Habilidad">
+                    </div>
+                    
+                    <div class="form-group">
+                    <label for="posiciontxt">Indice</label>
+                    <select class='form-control' id='posiciontxt' placeholder="Indice">
+                        <option value='Alto'>Alto</option>";                      
+                        <option value='Medio'>Medio</option>";
+                        <option value='Intermedio'>intermedio</option>";                      
+                    </select>
+                    </div>
+                    
+                    <div class="form-group">
+                    <button class="btn btn-primary" id="boton-guardar">Guardar</button>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <a id="boton-cerrarModal" href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+<!--</form>-->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://www.gstatic.com/firebasejs/3.5.3/firebase.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+.container{
+        margin-right: 1%;
+        margin-left: 1%;
+        width: 98%;
+        box-shadow: 10px 10px 30px #888888; /*sombra contenedor*/
+   
+    }
+    .btn{
+        box-shadow: 5px 5px 10px #888888;   /*sombra botones*/
+    }
+    #seleccion {
+        font-family: Verdana, Geneva, sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        color:#d79459;
+        text-align:center;
+        background-color:   #c1206656;
+        padding: 2%;
+        border-radius: 0.2em; /* esquinas redondeadas titulo contactos*/
+        box-shadow: 5px 5px 10px #888888;   /*sombra botones*/
+        /* lo siguiente es para que el texto quede en 3D a base de capas*/
+        text-shadow: 0 1px 0 #ccc,
+                       0 2px 0 #c9c9c9,
+                       0 3px 0 #bbb,
+                       0 4px 0 #b9b9b9,
+                       0 5px 0 #aaa,
+                       0 6px 1px rgba(0,0,0,.1),
+                       0 0 5px rgba(0,0,0,.1),
+                       0 1px 3px rgba(0,0,0,.3),
+                       0 3px 5px rgba(0,0,0,.2),
+                       0 5px 10px rgba(0,0,0,.25),
+                       0 10px 10px rgba(0,0,0,.2),
+                       0 20px 20px rgba(0,0,0,.15);   
+    }
+    .titulo1 {
+        text-align:center;
+        background-color:   #40c2dc;
+        color: white;
+        border-radius: 0.5em; /* esquinas redondeadas titulo contactos*/
+    }
+    /* Cuando hay varios td/th, el redondeo no puede aplicarse al tr asi que creo un id el primero y el ultimo*/
+    #primero {
+        border-top-left-radius: 0.5em; /* esquinas redondeadas th*/
+        border-bottom-left-radius: 0.5em; /* esquinas redondeadas th*/
+    }
+    #ultimo {
+        border-top-right-radius: 0.5em; /* esquinas redondeadas th*/
+        border-bottom-right-radius: 0.5em; /* esquinas redondeadas th*/
+    }
+    h3 {
+        background-color:   #4c6a92;
+        color: white; 
+        padding: 2%;
+    }
+    .titulo3 {
+        text-align:left;
+        background-color:   #9d85c0;
+        color: white;
+        text-shadow: 1px 2px 1px black;   /*sombra texto de los th .titulo3*/ 
+    }
